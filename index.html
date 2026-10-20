@@ -144,7 +144,8 @@
             "serviceType": "Content Marketing"
           }
         }
-      ]
+      ],
+      "image": "https://manikandan-portfolio-alpha.vercel.app/images/manikandan-m.png"
     },
     {
       "@type": "ProfilePage",
@@ -360,6 +361,30 @@ a{color:inherit;text-decoration:none}
 .now-list li b{color:var(--cream);font-weight:600}
 .tick{flex-shrink:0;width:22px;height:22px;border-radius:7px;background:var(--bordo);color:var(--cream);display:grid;place-items:center;margin-top:-1px}
 .tick svg{width:12px;height:12px}
+
+
+/* ---------- HERO PORTRAIT ---------- */
+.hero-visual{position:relative;justify-self:end;width:100%;max-width:440px}
+.portrait{display:block;position:relative;border-radius:30px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--glass-line);cursor:pointer;
+  background:radial-gradient(70% 55% at 50% 38%,rgba(245,218,191,.55),rgba(245,218,191,.12) 55%,transparent 75%),linear-gradient(180deg,#3A221B 0%,#2A1914 60%,#1F120F 100%);box-shadow:var(--glass-hi),var(--shadow);transition:transform .5s var(--ease),border-color .3s}
+.portrait picture{position:absolute;inset:0}
+.portrait img{width:100%;height:100%;object-fit:contain;object-position:center bottom;transition:transform .7s var(--ease)}
+.portrait:hover{border-color:rgba(245,218,191,.4)}
+.portrait:hover img{transform:scale(1.03)}
+.portrait-cta{position:absolute;top:16px;right:16px;z-index:2;display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--bordo);background:var(--cream);padding:7px 12px;border-radius:999px;opacity:0;transform:translateY(-4px);transition:all .3s var(--ease)}
+.portrait-cta svg{width:14px;height:14px}
+.portrait:hover .portrait-cta,.portrait:focus-visible .portrait-cta{opacity:1;transform:none}
+@media(hover:none){.portrait-cta{opacity:1;transform:none}}
+.portrait::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(to top,rgba(26,15,13,.85),transparent);pointer-events:none}
+.portrait-tag{position:absolute;top:16px;left:16px;z-index:2;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--cream);padding:6px 12px;border-radius:999px;background:rgba(26,15,13,.55);backdrop-filter:blur(8px);border:1px solid rgba(245,218,191,.2)}
+.hero-visual .now-card{margin:-70px -24px 0 -48px;padding:24px 26px}
+.hero-visual .now-role{font-size:22px}
+.hero-visual .now-co{margin-bottom:16px}
+.hero-visual .now-list{gap:10px;padding-top:16px}
+.hero-visual.noimg .portrait{display:none}
+.hero-visual.noimg .now-card{margin:0}
+@media(max-width:1080px){.hero-visual{justify-self:start;max-width:520px}.hero-visual .now-card{margin:-60px 16px 0 16px}}
+@media(max-width:600px){.portrait{aspect-ratio:4/4.4;border-radius:24px}.hero-visual .now-card{margin:-50px 10px 0 10px;padding:22px}}
 
 /* ---------- MARQUEE ---------- */
 .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:20px 0;position:relative;z-index:2;background:rgba(26,15,13,.4);
@@ -620,16 +645,19 @@ section.block{padding:130px 0 0;position:relative}
         <a href="https://www.linkedin.com/in/manikandan-murugesan-a92606222/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
       </div>
     </div>
-    <aside class="now-card reveal">
-      <div class="now-top"><span class="now-label">Currently</span><span class="live">Active</span></div>
-      <div class="now-role">Associate &ndash; Marketing<br><span class="it">SEO &amp; Digital Marketing</span></div>
-      <div class="now-co">IncepBio Private Limited &middot; Bengaluru &middot; Since May 2026</div>
-      <ul class="now-list">
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span>Built the company website <b>from scratch</b></span></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span><b>Google page 1</b> for core service pages</span></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span><b>Qualified B2B leads</b>, including international enquiries</span></li>
-      </ul>
-    </aside>
+    <div class="hero-visual reveal" id="heroVisual">
+      <a class="portrait" href="https://www.linkedin.com/in/manikandan-murugesan-a92606222/" target="_blank" rel="noopener" aria-label="Open Manikandan M on LinkedIn"><span class="portrait-tag">SEO &amp; Digital Marketing</span><picture><source srcset="images/manikandan-m.webp" type="image/webp"><img src="images/manikandan-m.png" alt="Manikandan M, SEO and Digital Marketing Specialist in Bengaluru" width="880" height="1100" fetchpriority="high" onerror="document.getElementById('heroVisual').classList.add('noimg')"></picture><span class="portrait-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>View LinkedIn</span></a>
+      <aside class="now-card">
+        <div class="now-top"><span class="now-label">Currently</span><span class="live">Active</span></div>
+        <div class="now-role">Associate &ndash; Marketing<br><span class="it">SEO &amp; Digital Marketing</span></div>
+        <div class="now-co">IncepBio Private Limited &middot; Bengaluru &middot; Since May 2026</div>
+        <ul class="now-list">
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span>Built the company website <b>from scratch</b></span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span><b>Google page 1</b> for core service pages</span></li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span><span><b>Qualified B2B leads</b>, including international enquiries</span></li>
+        </ul>
+      </aside>
+    </div>
   </div>
 </section>
 
