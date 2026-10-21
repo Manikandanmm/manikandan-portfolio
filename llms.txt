@@ -1,29 +1,39 @@
-# Manikandan M
+# Manikandan M - SEO & Digital Marketing Specialist Portfolio
 
-> SEO & Digital Marketing Specialist based in Bengaluru, India, with 2 years 5 months of experience in technical SEO, AI search optimization (AEO/GEO), content strategy and B2B lead generation. Currently Associate - Marketing (SEO & Digital Marketing) at IncepBio Private Limited.
+> Personal portfolio and professional credentials of Manikandan M, an SEO and Digital Marketing Specialist based in Bengaluru, India. 2 years 5 months of hands-on experience across technical SEO, AI search optimization (AEO/GEO), content strategy, Core Web Vitals, and B2B lead generation.
 
-## Summary
-- Built a B2B pharma company's website from scratch and grew organic search from zero to 800+ monthly clicks (2.5K+ clicks and 33.5K impressions in the last 3 months, impressions up 146%), with Google page 1 rankings for core service pages, within five months.
-- Published 1300+ SEO blogs, built 3300+ backlinks and moved key travel keywords into Google's Top 20 at Balaji Travels.
-- Open to SEO and Digital Marketing roles and selected freelance SEO projects.
+## Navigation & Sections
+- [Portfolio Homepage](https://manikandan-portfolio-alpha.vercel.app/): Main portfolio site overview, metrics, and case studies
+- [Selected Work & Case Studies](https://manikandan-portfolio-alpha.vercel.app/#work): IncepBio B2B SEO and Balaji Travels growth case studies
+- [Work Experience](https://manikandan-portfolio-alpha.vercel.app/#experience): Career history at IncepBio, Balaji Travels, Dailygong.in, and Sirusai
+- [Technical Skills](https://manikandan-portfolio-alpha.vercel.app/#skills): SEO, AEO/GEO, Web Vitals, Analytics, and CRM tools
+- [Documents & Resume](https://manikandan-portfolio-alpha.vercel.app/#documents): Experience certificate and one-page resume
+- [Frequently Asked Questions](https://manikandan-portfolio-alpha.vercel.app/#faq): Answers regarding experience, delivered results, tools, and availability
+- [Contact](https://manikandan-portfolio-alpha.vercel.app/#contact): Direct contact channels, email, and WhatsApp
 
-## Experience
-- Associate - Marketing (SEO & Digital Marketing), IncepBio Private Limited, Bengaluru (May 2026 - Present): website build, on-page/off-page/technical SEO, AEO/GEO with schema and FAQ content, content strategy (service-led blogs, LinkedIn posts, monthly newsletter), Odoo CRM lead capture with UTM tracking, email campaigns.
-- Digital Marketing Executive, Balaji Travels, Chennai (March 2024 - February 2026): 1300+ SEO blogs, 3300+ backlinks, 99K+ internal links fixed, Core Web Vitals, SEMrush audits, Google Business Profile, 211K+ YouTube views, 16K+ Facebook followers.
-- Digital Marketing Analyst (Freelance), Dailygong.in (January 2025 - February 2025): technical SEO audit.
-- SEO Intern, Sirusai, Dharmapuri (October 2023 - February 2024).
+## Featured Case Studies
+- [IncepBio Website](https://www.incepbio.com): Built a 20-page B2B website from scratch and grew organic search from zero to 2.5K+ clicks (up 71%) and 33.5K impressions (up 146%) in 3 months, with Google page 1 rankings for core service pages. Configured Odoo CRM lead capture with UTM tracking.
+- [Balaji Travels Case Study](https://manikandan-portfolio-alpha.vercel.app/#work): Published 1,300+ SEO blogs, built 3,300+ backlinks, resolved 99K+ internal links, improved Core Web Vitals, and ranked competitive travel keywords in Google's Top 20.
 
-## Skills
-- SEO: Technical SEO, On-Page SEO, Off-Page SEO, Local SEO, Keyword Research, Link Building, Site Audits, Core Web Vitals, Schema Markup
-- AI Search: Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), AI Overviews
-- Marketing: Content Strategy, B2B Lead Generation, Landing Pages, Email Marketing, Social Media
-- Tools: Google Analytics 4, Google Search Console, SEMrush, Ahrefs, PageSpeed Insights, Odoo CRM, WordPress, HTML/CSS
+## Verified Credentials & Public Files
+- [Resume PDF](https://manikandan-portfolio-alpha.vercel.app/Manikandan_M_SEO_Resume.pdf): One-page official SEO & Digital Marketing Resume
+- [XML Sitemap](https://manikandan-portfolio-alpha.vercel.app/sitemap.xml): Search engine sitemap for indexable URLs
+- [Robots.txt](https://manikandan-portfolio-alpha.vercel.app/robots.txt): Crawler directives
 
-## Education
-- B.Tech in Information Technology, University College of Engineering, Nagercoil (2019 - 2023)
+## Professional Experience
+- **Associate - Marketing (SEO & Digital Marketing)**, IncepBio Private Limited, Bengaluru (May 2026 - Present): Website build, on-page, off-page, and technical SEO, AEO/GEO with schema and FAQ content, content strategy (service-led blogs, LinkedIn, newsletters), Odoo CRM integration, email campaigns.
+- **Digital Marketing Executive**, Balaji Travels, Chennai (March 2024 - February 2026): 1,300+ SEO blogs, 3,300+ backlinks, 99K+ internal links fixed, Core Web Vitals, SEMrush audits, Google Business Profile, 211K+ YouTube views, 16K+ Facebook followers.
+- **Digital Marketing Analyst (Freelance)**, Dailygong.in (January 2025 - February 2025): Technical SEO audit, fixing indexing errors and site speed.
+- **SEO Intern**, Sirusai, Dharmapuri (October 2023 - February 2024): Keyword research, link building, competitor analysis.
 
-## Contact
-- Email: mmanikandan1322002@gmail.com
-- Phone / WhatsApp: +91 86789 70029
-- LinkedIn: https://www.linkedin.com/in/manikandan-murugesan-a92606222
-- Portfolio: https://manikandan-portfolio-alpha.vercel.app/
+## Core Competencies
+- **Technical & On-Page SEO**: Core Web Vitals, site architecture, schema markup (JSON-LD), crawl budget, internal linking, XML sitemaps, robots.txt.
+- **AI Search Optimization (AEO/GEO)**: Generative Engine Optimization, answer engine structuring, Google AI Overviews readiness, FAQ schemas.
+- **Growth & Marketing**: B2B lead generation, landing page conversion, Odoo CRM workflows, email marketing, content marketing.
+- **Tools**: Google Analytics 4 (GA4), Google Search Console (GSC), SEMrush, Ahrefs, PageSpeed Insights, Odoo CRM, WordPress.
+
+## Contact Information
+- Email: [mmanikandan1322002@gmail.com](mailto:mmanikandan1322002@gmail.com)
+- Phone / WhatsApp: [+91 86789 70029](https://wa.me/918678970029)
+- LinkedIn: [Manikandan Murugesan](https://www.linkedin.com/in/manikandan-murugesan-a92606222/)
+- Location: Bengaluru, Karnataka, India
