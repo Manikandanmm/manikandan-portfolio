@@ -117,10 +117,10 @@ module.exports = async function handler(req, res) {
       });
     }
 
-    if (!message || message.length < 10 || message.length > 5000) {
+    if (message && message.length > 5000) {
       return res.status(400).json({
         success: false,
-        error: 'Please provide project details (minimum 10 characters, maximum 5000 characters).'
+        error: 'Project details are too long (maximum 5000 characters).'
       });
     }
 
@@ -164,7 +164,7 @@ module.exports = async function handler(req, res) {
     const safeService = escapeHtml(service);
     const safeBudget = escapeHtml(budget || 'Not specified');
     const safeTimeline = escapeHtml(timeline || 'Not specified');
-    const safeMessage = escapeHtml(message).replace(/\n/g, '<br>');
+    const safeMessage = message ? escapeHtml(message).replace(/\n/g, '<br>') : '<em>No additional details provided.</em>';
 
     const emailSubject = `New Freelance Project Enquiry: ${safeName} (${safeService})`;
 
