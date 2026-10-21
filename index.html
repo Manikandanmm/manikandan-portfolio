@@ -572,6 +572,59 @@ section.block{padding:130px 0 0;position:relative}
 .faq details[open] summary::after{transform:rotate(45deg)}
 .faq details p{padding:0 22px 20px;font-size:14.5px;color:var(--ink-2);line-height:1.7}
 
+/* ---------- FREELANCE PROJECT ENQUIRY FORM ---------- */
+.enquiry-card{position:relative;border-radius:28px;padding:48px;max-width:920px;margin:0 auto}
+.enquiry-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(145deg,rgba(245,218,191,.5),transparent 40%,transparent 60%,rgba(108,21,30,.8));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.enquiry-hp{position:absolute;left:-9999px;opacity:0;pointer-events:none;height:0;width:0;overflow:hidden}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-bottom:24px}
+.form-group{display:flex;flex-direction:column;gap:8px}
+.form-group.full-width{grid-column:1 / -1}
+.form-group label{font-size:13px;font-weight:600;color:var(--ink-2);letter-spacing:.02em;display:flex;align-items:center;gap:4px}
+.form-group label .req{color:#E56B6F;font-weight:700}
+.form-group label .opt{font-size:11.5px;color:var(--muted);font-weight:400;margin-left:auto}
+.form-group input, .form-group textarea, .form-group select{
+  width:100%;font-family:var(--sans);font-size:14.5px;color:var(--cream);background:rgba(26,15,13,.55);
+  border:1px solid rgba(245,218,191,.2);border-radius:12px;padding:12px 16px;outline:none;
+  transition:border-color .25s,box-shadow .25s,background .25s;-webkit-appearance:none;appearance:none;
+}
+.form-group input::placeholder, .form-group textarea::placeholder{color:rgba(217,184,160,.4)}
+.form-group input:hover, .form-group textarea:hover, .form-group select:hover{border-color:rgba(245,218,191,.35);background:rgba(26,15,13,.7)}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus{border-color:var(--cream);box-shadow:0 0 0 3px rgba(245,218,191,.16);background:rgba(26,15,13,.85)}
+.form-group input.invalid, .form-group textarea.invalid, .form-group select.invalid{border-color:#E56B6F;box-shadow:0 0 0 3px rgba(229,107,111,.18)}
+.form-group textarea{resize:vertical;min-height:120px;line-height:1.6}
+.select-wrap{position:relative}
+.select-wrap select{padding-right:40px;cursor:pointer}
+.select-wrap select option{background:#2A1914;color:#F5DABF}
+.select-chevron{position:absolute;right:14px;top:50%;transform:translateY(-50%);pointer-events:none;width:18px;height:18px;color:var(--ink-2);display:grid;place-items:center}
+.select-chevron svg{width:16px;height:16px}
+.field-error{font-size:12px;color:#E56B6F;min-height:16px;display:none;line-height:1.3;margin-top:2px}
+.field-error.show{display:block}
+.form-actions{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:8px}
+.form-privacy-note{font-size:12px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.form-privacy-note svg{width:14px;height:14px;color:var(--accent);opacity:.8}
+.btn-spinner{display:none;width:14px;height:14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:spin .75s linear infinite;margin-right:6px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.enquiry-submit-btn.loading .btn-spinner{display:inline-block}
+.enquiry-submit-btn.loading .btn-icon{display:none}
+.enquiry-submit-btn:disabled{opacity:.7;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+
+/* Status alert boxes */
+.form-status{display:none;padding:16px 20px;border-radius:14px;font-size:14px;line-height:1.55;margin-bottom:20px}
+.form-status.show{display:flex;align-items:flex-start;gap:12px}
+.form-status.success{background:rgba(39,94,62,.3);border:1px solid rgba(127,224,168,.4);color:#B4F0CB}
+.form-status.error{background:rgba(108,21,30,.4);border:1px solid rgba(229,107,111,.45);color:#F7C1C4}
+.form-status-icon{flex-shrink:0;width:20px;height:20px;margin-top:2px}
+.form-status-msg{flex:1}
+.form-status-msg strong{display:block;margin-bottom:2px;font-weight:700}
+
+@media(max-width:768px){
+  .enquiry-card{padding:28px 20px;border-radius:22px}
+  .form-grid{grid-template-columns:1fr;gap:16px}
+  .form-actions{flex-direction:column;align-items:stretch;gap:14px}
+  .form-actions .btn{width:100%}
+  .form-privacy-note{justify-content:center}
+}
+
 /* ---------- MOBILE CTA ---------- */
 .m-cta{display:none}
 
@@ -666,6 +719,7 @@ section.block{padding:130px 0 0;position:relative}
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#documents">Resume</a>
+      <a href="#enquiry">Project Enquiry</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="Manikandan_M_SEO_Resume.pdf" download class="btn btn-primary">Download Resume</a>
@@ -984,12 +1038,142 @@ section.block{padding:130px 0 0;position:relative}
   </div>
 </section>
 
+<!-- ================= FREELANCE PROJECT ENQUIRY ================= -->
+<section class="block" id="enquiry" aria-labelledby="enquiry-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <span class="eyebrow">06 &mdash; Project Enquiry</span>
+        <h2 class="serif" id="enquiry-title">Start a <span class="it">project.</span></h2>
+      </div>
+      <p>Whether you need a technical SEO audit, speed optimization, website development, or organic search growth, share your project details below for a prompt response.</p>
+    </div>
+
+    <div class="enquiry-card glass reveal">
+      <form id="enquiryForm" class="enquiry-form" novalidate>
+        <!-- Anti-spam Honeypot (hidden from real users & screen readers) -->
+        <div class="enquiry-hp" aria-hidden="true">
+          <label for="enquiryHp">Leave this field blank</label>
+          <input type="text" name="_hp" id="enquiryHp" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-grid">
+          <!-- Full Name (required) -->
+          <div class="form-group">
+            <label for="enquiryName">Full Name <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="enquiryName" name="name" required placeholder="e.g. John Doe" autocomplete="name" aria-describedby="enquiryNameError">
+            <span class="field-error" id="enquiryNameError" role="alert" aria-live="assertive"></span>
+          </div>
+
+          <!-- Business Email (required) -->
+          <div class="form-group">
+            <label for="enquiryEmail">Business Email <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="enquiryEmail" name="email" required placeholder="e.g. name@company.com" autocomplete="email" aria-describedby="enquiryEmailError">
+            <span class="field-error" id="enquiryEmailError" role="alert" aria-live="assertive"></span>
+          </div>
+
+          <!-- Company Name (optional) -->
+          <div class="form-group">
+            <label for="enquiryCompany">Company Name <span class="opt">(Optional)</span></label>
+            <input type="text" id="enquiryCompany" name="company" placeholder="e.g. Acme Corp" autocomplete="organization">
+          </div>
+
+          <!-- Website URL (optional) -->
+          <div class="form-group">
+            <label for="enquiryWebsite">Website URL <span class="opt">(Optional)</span></label>
+            <input type="url" id="enquiryWebsite" name="website" placeholder="https://example.com" autocomplete="url" aria-describedby="enquiryWebsiteError">
+            <span class="field-error" id="enquiryWebsiteError" role="alert" aria-live="assertive"></span>
+          </div>
+
+          <!-- Service Required (required dropdown) -->
+          <div class="form-group">
+            <label for="enquiryService">Service Required <span class="req" aria-hidden="true">*</span></label>
+            <div class="select-wrap">
+              <select id="enquiryService" name="service" required aria-describedby="enquiryServiceError">
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Technical SEO Audit">Technical SEO Audit</option>
+                <option value="Website Speed Optimization">Website Speed Optimization</option>
+                <option value="Website Development">Website Development</option>
+                <option value="SEO & Content Marketing">SEO &amp; Content Marketing</option>
+                <option value="AEO / GEO Optimization">AEO / GEO Optimization</option>
+                <option value="Other">Other</option>
+              </select>
+              <span class="select-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </div>
+            <span class="field-error" id="enquiryServiceError" role="alert" aria-live="assertive"></span>
+          </div>
+
+          <!-- Budget Range (optional dropdown) -->
+          <div class="form-group">
+            <label for="enquiryBudget">Budget Range <span class="opt">(Optional)</span></label>
+            <div class="select-wrap">
+              <select id="enquiryBudget" name="budget">
+                <option value="" selected>Select budget range...</option>
+                <option value="Under ₹25,000 / $300">&lt; ₹25,000 / $300</option>
+                <option value="₹25,000 - ₹50,000 / $300 - $600">₹25,000 &ndash; ₹50,000 / $300 &ndash; $600</option>
+                <option value="₹50,000 - ₹1,00,000 / $600 - $1,200">₹50,000 &ndash; ₹1,00,000 / $600 &ndash; $1,200</option>
+                <option value="₹1,00,000+ / $1,200+">₹1,00,000+ / $1,200+</option>
+                <option value="Flexible / To be discussed">Flexible / To be discussed</option>
+              </select>
+              <span class="select-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Project Timeline (optional dropdown) -->
+          <div class="form-group full-width">
+            <label for="enquiryTimeline">Project Timeline <span class="opt">(Optional)</span></label>
+            <div class="select-wrap">
+              <select id="enquiryTimeline" name="timeline">
+                <option value="" selected>Select project timeline...</option>
+                <option value="Urgent (Within 1-2 weeks)">Urgent (Within 1&ndash;2 weeks)</option>
+                <option value="Standard (Within 1 month)">Standard (Within 1 month)</option>
+                <option value="Ongoing / Quarterly (1-3 months)">Ongoing / Quarterly (1&ndash;3 months)</option>
+                <option value="Flexible / Just planning">Flexible / Just planning</option>
+              </select>
+              <span class="select-chevron" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+              </span>
+            </div>
+          </div>
+
+          <!-- Project Details (required textarea) -->
+          <div class="form-group full-width">
+            <label for="enquiryMessage">Project Details <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="enquiryMessage" name="message" rows="5" required placeholder="Describe your project goals, website URL, primary keywords, current obstacles, or specific requirements..." aria-describedby="enquiryMessageError"></textarea>
+            <span class="field-error" id="enquiryMessageError" role="alert" aria-live="assertive"></span>
+          </div>
+        </div>
+
+        <!-- Status / Feedback Container -->
+        <div id="enquiryStatus" class="form-status" role="status" aria-live="polite"></div>
+
+        <!-- Submit Action -->
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary enquiry-submit-btn" id="enquirySubmitBtn">
+            <span class="btn-spinner" aria-hidden="true"></span>
+            <span class="btn-text">Submit Project Enquiry</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <span class="form-privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Direct inbox delivery &bull; No spam guaranteed
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
 </main>
 
 <!-- ================= CONTACT ================= -->
 <footer class="contact dark" id="contact">
   <div class="wrap">
-    <span class="eyebrow">06 &mdash; Contact</span>
+    <span class="eyebrow">07 &mdash; Contact</span>
     <h2 class="serif">Let's grow your <span class="it">organic search.</span></h2>
     <div class="contact-row">
       <a href="mailto:mmanikandan1322002@gmail.com" class="btn btn-cream">
@@ -998,8 +1182,8 @@ section.block{padding:130px 0 0;position:relative}
       <a href="https://www.linkedin.com/in/manikandan-murugesan-a92606222/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
     </div>
     <div class="freelance">
-      <p><b>Open to freelance SEO projects.</b> SEO audits, website + SEO setup, local SEO or monthly SEO. Send your requirement and I'll get back to you.</p>
-      <a class="btn btn-ghost" href="https://wa.me/918678970029?text=Hi%20Manikandan%2C%20I%20have%20a%20freelance%20SEO%20requirement." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3.5 20l1.2-4.2A8.5 8.5 0 1 1 20.5 11.5z"/></svg>Message on WhatsApp</a>
+      <p><b>Open to freelance projects &amp; SEO consultations.</b> Technical SEO audits, website speed optimization, development, or monthly search campaigns. Share your goals for a custom plan.</p>
+      <a class="btn btn-primary" href="#enquiry">Start Project Enquiry &rarr;</a>
     </div>
     <div class="foot"><span>&copy; 2026 Manikandan M</span><a href="#top">Back to top &uarr;</a><span>Bengaluru, India</span></div>
   </div>
@@ -1007,7 +1191,7 @@ section.block{padding:130px 0 0;position:relative}
 
 <!-- Mobile sticky CTA -->
 <div class="m-cta" id="mCta">
-  <a href="Manikandan_M_SEO_Resume.pdf" download class="btn btn-primary">Resume</a>
+  <a href="#enquiry" class="btn btn-primary">Project Enquiry</a>
   <a href="#contact" class="btn btn-ghost">Contact</a>
 </div>
 
@@ -1198,6 +1382,218 @@ const io = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// ---------- FREELANCE PROJECT ENQUIRY (AJAX & ACCESSIBLE VALIDATION) ----------
+(function() {
+  const form = document.getElementById('enquiryForm');
+  if (!form) return;
+
+  const submitBtn = document.getElementById('enquirySubmitBtn');
+  const statusBox = document.getElementById('enquiryStatus');
+
+  const fields = {
+    name: { el: document.getElementById('enquiryName'), err: document.getElementById('enquiryNameError') },
+    email: { el: document.getElementById('enquiryEmail'), err: document.getElementById('enquiryEmailError') },
+    company: { el: document.getElementById('enquiryCompany') },
+    website: { el: document.getElementById('enquiryWebsite'), err: document.getElementById('enquiryWebsiteError') },
+    service: { el: document.getElementById('enquiryService'), err: document.getElementById('enquiryServiceError') },
+    budget: { el: document.getElementById('enquiryBudget') },
+    timeline: { el: document.getElementById('enquiryTimeline') },
+    message: { el: document.getElementById('enquiryMessage'), err: document.getElementById('enquiryMessageError') },
+    hp: { el: document.getElementById('enquiryHp') }
+  };
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function clearErrors() {
+    statusBox.className = 'form-status';
+    statusBox.innerHTML = '';
+    Object.values(fields).forEach(f => {
+      if (f.el) {
+        f.el.classList.remove('invalid');
+        f.el.removeAttribute('aria-invalid');
+      }
+      if (f.err) {
+        f.err.textContent = '';
+        f.err.classList.remove('show');
+      }
+    });
+  }
+
+  function setFieldError(field, msg) {
+    if (field.el) {
+      field.el.classList.add('invalid');
+      field.el.setAttribute('aria-invalid', 'true');
+    }
+    if (field.err) {
+      field.err.textContent = msg;
+      field.err.classList.add('show');
+    }
+  }
+
+  function validate() {
+    let isValid = true;
+    clearErrors();
+
+    // 1. Name validation
+    const nameVal = fields.name.el.value.trim();
+    if (!nameVal) {
+      setFieldError(fields.name, 'Full name is required.');
+      isValid = false;
+    } else if (nameVal.length < 2) {
+      setFieldError(fields.name, 'Please enter at least 2 characters.');
+      isValid = false;
+    }
+
+    // 2. Email validation
+    const emailVal = fields.email.el.value.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    if (!emailVal) {
+      setFieldError(fields.email, 'Business email is required.');
+      isValid = false;
+    } else if (!emailRegex.test(emailVal)) {
+      setFieldError(fields.email, 'Please enter a valid business email address.');
+      isValid = false;
+    }
+
+    // 3. Service validation
+    const serviceVal = fields.service.el.value.trim();
+    if (!serviceVal) {
+      setFieldError(fields.service, 'Please select a service required.');
+      isValid = false;
+    }
+
+    // 4. Website validation (optional)
+    const websiteVal = fields.website.el.value.trim();
+    if (websiteVal && !/^https?:\/\//i.test(websiteVal) && !/^[a-z0-9-]+(\.[a-z0-9-]+)+/i.test(websiteVal)) {
+      setFieldError(fields.website, 'Please enter a valid URL (e.g. https://example.com).');
+      isValid = false;
+    }
+
+    // 5. Message validation
+    const messageVal = fields.message.el.value.trim();
+    if (!messageVal) {
+      setFieldError(fields.message, 'Project details are required.');
+      isValid = false;
+    } else if (messageVal.length < 10) {
+      setFieldError(fields.message, 'Please provide more details (minimum 10 characters).');
+      isValid = false;
+    }
+
+    return isValid;
+  }
+
+  // Clear errors live on input or change
+  ['input', 'change'].forEach(evt => {
+    form.addEventListener(evt, e => {
+      const target = e.target;
+      if (target.classList.contains('invalid')) {
+        target.classList.remove('invalid');
+        target.removeAttribute('aria-invalid');
+        const errSpan = document.getElementById(target.id + 'Error');
+        if (errSpan) {
+          errSpan.textContent = '';
+          errSpan.classList.remove('show');
+        }
+      }
+    });
+  });
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    if (!validate()) {
+      const firstInvalid = form.querySelector('.invalid');
+      if (firstInvalid) {
+        firstInvalid.focus();
+        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      return;
+    }
+
+    const payload = {
+      name: fields.name.el.value.trim(),
+      email: fields.email.el.value.trim(),
+      company: fields.company.el.value.trim(),
+      website: fields.website.el.value.trim(),
+      service: fields.service.el.value.trim(),
+      budget: fields.budget.el.value.trim(),
+      timeline: fields.timeline.el.value.trim(),
+      message: fields.message.el.value.trim(),
+      _hp: fields.hp.el.value.trim()
+    };
+
+    // UI Loading state
+    submitBtn.disabled = true;
+    submitBtn.classList.add('loading');
+    const btnTextEl = submitBtn.querySelector('.btn-text');
+    const originalText = btnTextEl ? btnTextEl.textContent : 'Submit Project Enquiry';
+    if (btnTextEl) btnTextEl.textContent = 'Submitting Enquiry...';
+
+    statusBox.className = 'form-status';
+    statusBox.innerHTML = '';
+
+    try {
+      const response = await fetch('/api/enquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data.success) {
+        // Confirmed Success: inline accessible thank-you message
+        statusBox.className = 'form-status success show';
+        statusBox.innerHTML = `
+          <svg class="form-status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+          <div class="form-status-msg">
+            <strong>Enquiry Submitted</strong>
+            Thank you for reaching out! Your project enquiry has been submitted successfully. I’ll review your requirements and get back to you as soon as possible.
+          </div>
+        `;
+        // Reset only on confirmed success
+        form.reset();
+        statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } else {
+        // Error state: preserve all user-entered values
+        const errMsg = data.error || 'Unable to submit your enquiry at this time. Please try again or reach out directly at mmanikandan1322002@gmail.com.';
+        statusBox.className = 'form-status error show';
+        statusBox.innerHTML = `
+          <svg class="form-status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          <div class="form-status-msg">
+            <strong>Submission Notice</strong>
+            ${escapeHtml(errMsg)}
+          </div>
+        `;
+        statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    } catch (networkErr) {
+      // Network error: preserve form values
+      statusBox.className = 'form-status error show';
+      statusBox.innerHTML = `
+        <svg class="form-status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="form-status-msg">
+          <strong>Network Error</strong>
+          Unable to connect to the enquiry service. Please check your internet connection or email directly at <a href="mailto:mmanikandan1322002@gmail.com" style="color:inherit;text-decoration:underline;font-weight:600;">mmanikandan1322002@gmail.com</a>.
+        </div>
+      `;
+      statusBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.classList.remove('loading');
+      if (btnTextEl) btnTextEl.textContent = originalText;
+    }
+  });
+})();
 </script>
 </body>
 </html>

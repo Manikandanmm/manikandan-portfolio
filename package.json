@@ -1,0 +1,17 @@
+{
+  "name": "manikandan-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Manikandan M - SEO & Digital Marketing Specialist",
+  "private": true,
+  "scripts": {
+    "start": "node scratch/server.js",
+    "test": "node --check api/enquiry.js"
+  },
+  "keywords": [
+    "portfolio",
+    "seo",
+    "digital-marketing"
+  ],
+  "author": "Manikandan M",
+  "license": "ISC"
+}

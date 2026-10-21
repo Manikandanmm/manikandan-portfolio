@@ -1,0 +1,14 @@
+# Environment variables (NEVER commit secrets to Git)
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+
+# Vercel deployment cache
+.vercel/
+
+# OS metadata
+.DS_Store
+Thumbs.db
