@@ -1140,10 +1140,10 @@ section.block{padding:130px 0 0;position:relative}
             </div>
           </div>
 
-          <!-- Project Details (required textarea) -->
+          <!-- Project Details (optional textarea) -->
           <div class="form-group full-width">
-            <label for="enquiryMessage">Project Details <span class="req" aria-hidden="true">*</span></label>
-            <textarea id="enquiryMessage" name="message" rows="5" required placeholder="Describe your project goals, website URL, primary keywords, current obstacles, or specific requirements..." aria-describedby="enquiryMessageError"></textarea>
+            <label for="enquiryMessage">Project Details <span class="opt">(Optional)</span></label>
+            <textarea id="enquiryMessage" name="message" rows="5" placeholder="Describe your project goals, website URL, primary keywords, current obstacles, or specific requirements..." aria-describedby="enquiryMessageError"></textarea>
             <span class="field-error" id="enquiryMessageError" role="alert" aria-live="assertive"></span>
           </div>
         </div>
@@ -1475,13 +1475,10 @@ document.querySelectorAll('.reveal').forEach(el => io.observe(el));
       isValid = false;
     }
 
-    // 5. Message validation
+    // 5. Message validation (optional)
     const messageVal = fields.message.el.value.trim();
-    if (!messageVal) {
-      setFieldError(fields.message, 'Project details are required.');
-      isValid = false;
-    } else if (messageVal.length < 10) {
-      setFieldError(fields.message, 'Please provide more details (minimum 10 characters).');
+    if (messageVal && messageVal.length > 5000) {
+      setFieldError(fields.message, 'Project details are too long (maximum 5000 characters).');
       isValid = false;
     }
 
